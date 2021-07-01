@@ -1,0 +1,28 @@
+doctype html
+html
+    head
+        style
+            include ../public/style.css
+        title=title 
+        
+    body
+        .container
+            form.register(action='/register' method='POST')
+                .form1
+                    input.registrationform(type='text' name='name' placeholder='Name')
+                    br
+                    select
+                        option#gender Gender
+                        option Female
+                        option Male
+                    br
+                    input.registrationform(type='Date of Birth' name='dob' placeholder='Date Of Birth')
+                    br
+                .form2
+                    input.registrationform(type='text' name='nin' placeholder='Enter ID Number')
+                    br
+                    input.registrationform(type='text' name='placeofreside' placeholder='Place of Residence')
+                    br
+                    input.registrationform(type='text' name='employesid' placeholder='Employees ID')
+                    br                    
+                button.buttonregistration Register        

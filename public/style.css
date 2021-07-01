@@ -1,0 +1,52 @@
+/* * stylying the register form */
+.zacarwashregister {
+    margin-top: 30px;
+    background-color: azure;
+    font-size: 40px;
+    color: #0d6efd; 
+    text-align: center;  
+}
+.register {
+    background: rgb(149, 184, 248); 
+    width: 650px;
+    height: 300px;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+.registrationform {
+    margin-top: 20px;
+    width: 90%;
+    border: none;
+    border-radius: 12px;
+    padding: 8px;   
+}
+select {
+    margin-top: 20px;
+    width: 90%;
+    border: none;
+    border-radius: 12px;
+    padding: 9.5px;
+    color: grey;
+}
+.buttonregistration {
+    margin-top: 20px;
+    width: 95%;
+    border: none;
+    border-radius: 12px;
+    padding: 8px;
+    font-size: 20px;
+}
+.form1{
+    width: 50%;
+    float: left;
+}
+
+.form2{
+    width: 50%;
+    float: right;
+}
+button:hover{
+    background-color: rgb(92, 146, 247);
+}
