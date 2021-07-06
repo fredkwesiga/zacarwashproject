@@ -3,6 +3,7 @@ const express = require('express');
 const path = require('path')
 const loginRoutes = require('./routes/loginRoutes')
 const registerRoutes = require('./routes/registerRoutes');
+const carwashtrackingRoutes = require('./routes/carwashtrackingRoutes')
 //instantitions
 const app = express();
 
@@ -21,8 +22,7 @@ app.use(express.static(path.join(__dirname, "public")));
 //routes
 app.use('/', loginRoutes)
 app.use('/register', registerRoutes);
-
-//routing the login page
+app.use('/carwashtracking', carwashtrackingRoutes);
 
 
 //handle non exisiting routes

@@ -15,9 +15,9 @@ block content
                         span.sr-only
                 ul.navbar-nav
                     li#nav-home.nav-item
-                    a.nav-link(href='index.html') Home
+                    a.nav-link(href='/carwashtracking') CarWash Tracker
                     li#nav-signup.nav-item
-                    a.nav-link(href='register.html') Register
+                    a.nav-link(href='/register') Register
     .container
         .row
             .col-12.mx-auto.shadow-lg.p-md-4.p-5
@@ -27,7 +27,7 @@ block content
                     .col-md-1.col-1
                     .col-md-6.col-6
                         h1#zarwash.mb-4 ZaCAR WASH
-                        form.form(name='login')
+                        form.form(name='login' action='/' method='POST')
                             div
                             input#email.form-control.form-control-lg.mb-3(aria-label='Email' type='email' name='useremail' placeholder='Email Address' size='30px')
                             small#error1
@@ -35,7 +35,7 @@ block content
                             input#password.form-control.form-control-lg.mb-3(aria-label='password' type='password' name='password' placeholder='Password' size='30px')
                             small#error2
                             div
-                            button.btn.btn-dark.btn-lg(type='button' onclick='validation()') Login
+                            button.btn.btn-dark.btn-lg(type='submit') Login
                         span.forgot-password
                             a#link-reset(href='#' title='Forgot Password') Forgot Password?
                             br
@@ -43,9 +43,9 @@ block content
                             .text-centre
                             p
                                 | Click 
-                                a(href='register.html') Register
+                                a(href='/register') Register
                                 |  to create an account
             div
             span.copyright &copy;Designed by fredkwesiga 
-            script(src='zacarwash.js')
+            //- script(src='zacarwash.js')
             | &gt;

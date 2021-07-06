@@ -1,13 +1,14 @@
+
 const express = require('express');
 const router = express.Router();
 
 
 router.get('/',(req,res)=>{
-  res.render('login', {title:"Login page"})
+  res.render('carwashtracking', {title:"CarWash Tracking System"})
 })
 router.post('/', (req,res)=>{
   console.log(req.body)
-  res.send("Successful logged in")
+  res.send("Welcome to the Tracking system")
 })
 
 module.exports = router;

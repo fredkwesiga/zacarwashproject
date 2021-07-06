@@ -27,10 +27,10 @@
 
 
 html, body {
-    height: 90%;
+	height: 90%;
 }
 body {
-    font-family: Arial, Helvetica, sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -46,25 +46,25 @@ letter-spacing:0.5px;
 }
 /* Edits login input */
 .form-control-lg {
-    font-size: 16px;
-    padding: 25px 20px;
-    border-radius: 50;
+	font-size: 16px;
+	padding: 25px 20px;
+	border-radius: 50;
     height: 20px;
     float: right;
 }
 .bg-image {
-    background: url(Images/cleaning-1837328_960_720.jpeg);
-    background-position: center;
+	background: url(Images/cleaning-1837328_960_720.jpeg);
+	background-position: center;
 }
 /* container for login page */
 .container {
-    height: 80%;
+	height: 80%;
     width: 200%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 765px;
-    margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 765px;
+	margin-top: 20px;
 }
 .form-control-lg {
     height: 20px;
@@ -74,14 +74,13 @@ letter-spacing:0.5px;
     margin-top: 20px;
 }
 .copyright{
-    margin-top: 10px;
-    padding-left: 300px;
+    padding-left: 550px;
     color: rgba(116, 113, 113, 0.7);
 }
 
 
-
 /* stylying the register form */
+
 .zacarwashregister {
     margin-top: 30px;
     background-color: azure;
@@ -132,4 +131,72 @@ select {
 }
 button:hover{
     background-color: rgb(92, 146, 247);
+}
+
+/* styling the carwashtracker form */
+.carwashtrack{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;  
+}
+.packageheading{
+    padding-left: 300px;
+    font-size: 10px;
+}
+.card{
+    height: 100px;
+}
+.card-header{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 40px;
+}
+.card-body{
+    width: 160px;
+    height: 60px;
+}
+.list-group-flush{
+    text-align: center;
+    display: inline;
+
+}
+
+.costmonitorform{
+    background: rgb(163, 193, 241); 
+    width: 700px;
+    height: 350px;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 120px;
+    text-align: center;
+} 
+.costmonitor{
+    margin-top: 20px;
+    width: 90%;
+    height: 40px;
+    border: none;
+    padding: 5px;   
+}
+.costmonitorbutton{
+    margin-top: 20px;
+    width: 95%;
+    height: 15%;
+    border: none;
+    padding: 5px;
+    font-size: 20px;
+}
+.part1{
+    float: left;
+    width: 50%;
+} 
+.part2{
+    float: left;
+    width: 50%;
+} 
+#costmonitorpackages{
+    margin-top: 20px;
+    width: 90%;
+    height: 40px;
+    border-radius: 0px; 
+    padding: 5px;
 }
