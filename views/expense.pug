@@ -1,0 +1,28 @@
+extends layout 
+
+block content
+    body
+        .inventheader
+            h5(style='font-size: 40px;') Zawash Expenses
+        .expense
+            table.table.table-bordered
+                thead
+                    tr
+                        th.tableheader Date
+                        th.tableheader Inventory
+                        th.tableheader Price
+                tbody
+                    tr
+                        td
+                            input.expenseinput(type='text' onfocus="(this.type='date')" placeholder='Date' required='')
+                        td
+                            select#items
+                                option Items
+                                option Electricity
+                                option Water
+                                option Salaries
+                            br
+                        td
+                            input.expenseinput(type='number' placeholder='Price' required='')
+                        br
+            button.expensebutton(type='Submit') Send

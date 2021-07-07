@@ -1,79 +1,65 @@
 extends layout 
 
 block content
-    nav.navbar.navbar-expand-lg.navbar-.lighter.bg-light
-        .container-fluid
-            a.navbar-brand(href='#') ZaCAR Wash
-            button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
-                span.navbar-toggler-icon
-            #navbarSupportedContent.collapse.navbar-collapse
-                ul.navbar-nav.mr-auto
-                    li.nav-item.active
-                    a.nav-link.active(aria-labelledby='navbarDropdown' href='/login')
-                        | Login
-                        span.sr-only
-                ul.navbar-nav
-                    li#nav-signup.nav-item
-                    a.nav-link(href='/register') Register
-
-    .container-fluid.offset-md-2
-        .row
-            .packageheading
-                h3 Car Washing Packages
-        .row
-            .col-2
-                .card
-                    .card-header
-                        | Small Cars
-                    .card-body
-                        ul.list-group.list-group-flush
-                            li.list-group-item 10,000 Ush
-            .col-2
-                .card
-                    .card-header
-                        | Medium Cars
-                    .card-body
-                        ul.list-group.list-group-flush
-                            li.list-group-item 20,000 Ush
-            .col-2
-                .card
-                    .card-header
-                        | Boda Boda
-                    .card-body
-                        ul.list-group.list-group-flush
-                            li.list-group-item 5,000 Ush
-            .col-2
-                .card
-                    .card-header
-                        | Engine
-                    .card-body
-                        ul.list-group.list-group-flush
-                            li.list-group-item 10,000 Ush
-    hr
-    .carwashtrack
-        h4
-            strong Car Wash Tracking
-        .container
-            form.costmonitorform(action='/carwashtracking' method='POST')
-                .part1.col-lg-8
-                    input.costmonitor(type='text' placeholder='Car Model' required='') 
-                    br
-                    input.costmonitor(type='text' placeholder='Car Number plate' required='')
-                    br
-                    input.costmonitor(type='text' placeholder='Car Colour' required='')
-                    br
-                    select#costmonitorpackages(style="font-size:15px;")
-                        option Package
-                        option Small Cars
-                        option Medium Cars
-                        option Boda Boda
-                        option Engine
-                .part2.col-lg-8
-                    input.costmonitor(type='text' onfocus="(this.type='date')" placeholder='Date of Arrival' required='')
-                    br
-                    input.costmonitor(type='text' onfocus="(this.type='time')" placeholder='Time of Arrival' required='')
-                    br
-                    input.costmonitor(type='text' placeholder='Employee' required='')
-                    br
-                    input.costmonitor(type='text' placeholder='Payment')
-                button.costmonitorbutton(type='button') Submit
+    body
+        .container-fluid.offset-md-2
+            .row
+                .packageheading
+                    h3 Car Washing Packages
+            .row
+                .col-2
+                    .card
+                        .card-header
+                            | Small Cars
+                        .card-body
+                            ul.list-group.list-group-flush
+                                li.list-group-item 10,000 Ush
+                .col-2
+                    .card
+                        .card-header
+                            | Medium Cars
+                        .card-body
+                            ul.list-group.list-group-flush
+                                li.list-group-item 20,000 Ush
+                .col-2
+                    .card
+                        .card-header
+                            | Boda Boda
+                        .card-body
+                            ul.list-group.list-group-flush
+                                li.list-group-item 5,000 Ush
+                .col-2
+                    .card
+                        .card-header
+                            | Engine
+                        .card-body
+                            ul.list-group.list-group-flush
+                                li.list-group-item 10,000 Ush
+        hr
+        .carwashtrack
+            h4
+                strong Car Wash Tracking
+            .container
+                form.costmonitorform(action='/carwashtracking' method='POST')
+                    .part1.col-lg-8
+                        input.costmonitor(type='text' placeholder='Car Model' required='') 
+                        br
+                        input.costmonitor(type='text' placeholder='Car Number plate' required='')
+                        br
+                        input.costmonitor(type='text' placeholder='Car Colour' required='')
+                        br
+                        select#costmonitorpackages(style="font-size:15px;")
+                            option Package
+                            option Small Cars
+                            option Medium Cars
+                            option Boda Boda
+                            option Engine
+                    .part2.col-lg-8
+                        input.costmonitor(type='text' onfocus="(this.type='date')" placeholder='Date of Arrival' required='')
+                        br
+                        input.costmonitor(type='text' onfocus="(this.type='time')" placeholder='Time of Arrival' required='')
+                        br
+                        input.costmonitor(type='text' placeholder='Employee' required='')
+                        br
+                        input.costmonitor(type='text' placeholder='Payment')
+                    button.costmonitorbutton(type='submit') Submit

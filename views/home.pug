@@ -1,0 +1,33 @@
+extends layout 
+
+block content
+  body
+    .container-fluid
+      .row
+        .col-sm-6
+          .text
+            h1#welcome Welcome to ZaCar Wash
+            h2#whyus Why us?
+            ul.list
+              li No more long car wash queues. You can place a booking
+              li Wash your car anywhere publicly accessible
+              li Trusted and highly skilled mobile car wash pros
+              li imple and secure online payment
+          .location
+            h6.locationt Location
+            p  We are Located in Kakiri, opposite FK Bank along Hoima Road 
+        .col-sm-6
+          #carouselExampleFade.carousel.slide.carousel-fade(data-bs-ride='carousel')
+            .carousel-inner
+              .carousel-item.active
+                img.home(src='Images/interior cleaning.jpeg' alt='...')
+              .carousel-item
+                img.home(src='Images/concentrated-professional-african-worker-cleaning-car-console-control-panel-microfiber-cloth-car-wash-detailing-177723086.jpeg' alt='...')
+              .carousel-item
+                img.home(src='Images/close-up-portrait-young-pleasant-african-car-wash-worker-wearing-protective-overalls-cleaning-automobile-high-pressure-179069256.jpeg' alt='...')
+            button.carousel-control-prev(type='button' data-bs-target='#carouselExampleFade' data-bs-slide='prev')
+              span.carousel-control-prev-icon(aria-hidden='true')
+              span.visually-hidden Previous
+            button.carousel-control-next(type='button' data-bs-target='#carouselExampleFade' data-bs-slide='next')
+              span.carousel-control-next-icon(aria-hidden='true')
+              span.visually-hidden Next
