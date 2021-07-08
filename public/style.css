@@ -92,6 +92,7 @@ letter-spacing:0.5px;
     margin-top: 20px;
 }
 .copyright{
+    font-size: 15px;
     margin-left: 67%;
     color: rgba(116, 113, 113, 0.7);
 }
@@ -158,20 +159,22 @@ button:hover{
     margin-top: 20px;  
 }
 .packageheading{
-    padding-left: 300px;
+    padding-left: 400px;
     font-size: 10px;
 }
 .card{
-    height: 100px;
+    height: 80px;
 }
 .card-header{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    height: 40px;
+    height: 30px;
 }
 .card-body{
     width: 160px;
-    height: 60px;
+    height: 50px;
+    padding: 0px;
+    text-align: center;
 }
 .list-group-flush{
     text-align: center;
