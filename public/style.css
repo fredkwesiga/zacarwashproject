@@ -92,8 +92,9 @@ letter-spacing:0.5px;
     margin-top: 20px;
 }
 .copyright{
+    text-align: center;
     font-size: 15px;
-    margin-left: 67%;
+    /* margin-left: 67%; */
     color: rgba(116, 113, 113, 0.7);
 }
 
