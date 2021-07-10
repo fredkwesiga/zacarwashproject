@@ -1,6 +1,8 @@
 //Dependecies
 const express = require('express');
 const path = require('path')
+const mongoose = require('mongoose');
+require('dotenv').config();
 
 const loginRoutes = require('./routes/loginRoutes')
 const registerRoutes = require('./routes/registerRoutes');
@@ -9,6 +11,21 @@ const expenseRoutes = require('./routes/expenseRoutes')
 const homeRoutes = require('./routes/homeRoutes')
 //instantitions
 const app = express();
+
+// mongodb connection
+mongoose.connect(process.env.DATABASE, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
+
+mongoose.connection
+  .on('open', () => {
+    console.log('Mongoose connection open');
+  })
+  .on('error', (err) => {
+    console.log(`Connection error: ${err.message}`);
+  });
+
 
 //configurations or settings
 // Express.js application to look in the views folder for template files and to use Pug as the template engine.

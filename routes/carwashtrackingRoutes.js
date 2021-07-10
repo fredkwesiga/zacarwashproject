@@ -1,6 +1,7 @@
 
 const express = require('express');
 const router = express.Router();
+const Carwashtrack = require('../models/Carwashtrack')
 
 
 router.get('/',(req,res)=>{
@@ -8,7 +9,10 @@ router.get('/',(req,res)=>{
 })
 router.post('/', (req,res)=>{
   console.log(req.body)
-  res.send("Welcome to the Tracking system")
+  const carwashtrack = new Carwashtrack(req.body)
+  carwashtrack.save()
+      .then(()=>{res.send('Car monitor tracks submitted')})
+      .catch((err)=>{console.log(err);res.send('No tracking has been submiited')})
 })
 
 module.exports = router;
