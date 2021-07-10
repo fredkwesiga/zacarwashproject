@@ -187,7 +187,8 @@ hr {
 }
 
 .costmonitorform{
-    background: rgb(163, 193, 241); 
+    background-image: url(/images/carlightwash.jpg);
+    background: linear-gradient(to bottom, #000000b8, #4087f0b9), url("/images/carlightwash.jpg");  
     width: 700px;
     height: 350px;
     border-radius: 10px;
