@@ -1,8 +1,13 @@
 extends layout 
 
 block content
-  body    
+  body 
+   
     div
+      if alert == "success"
+        div.alert.alert-success Washer added successfully
+      if alert == "error"
+        div.alert.alert-danger An error occurred, failed to add washer   
       h2.zacarwashregister
         strong ZaCar Wash Registry
     

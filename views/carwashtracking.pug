@@ -66,7 +66,9 @@ block content
                         br
                         input.costmonitor(type='text' name='timeararrived' onfocus="(this.type='time')" placeholder='Time of Arrival' required='')
                         br
-                        input.costmonitor(type='text' name='washer' placeholder='Employee' required='')
+                        select.washer(name="washer")
+                            each washer in washers //for each washer who is in that washer list return
+                                option(value=washer._id) #{washer.name}
                         br
                         input.costmonitor(type='text' placeholder='Payment')
                     button.costmonitorbutton(type='submit') Submit

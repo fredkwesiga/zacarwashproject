@@ -225,6 +225,12 @@ hr {
     border-radius: 0px; 
     padding: 5px;
 }
+.washer{
+    width: 90%;
+    height: 40px;
+    border-radius: 0px; 
+    padding: 0px;
+}
 /* styling the expense.html */
 .inventheader{
     text-align: center;
