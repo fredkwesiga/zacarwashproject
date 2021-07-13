@@ -62,12 +62,12 @@ block content
                             option Boda Boda
                             option Engine
                     .part2.col-lg-8
-                        input.costmonitor(type='text' name='datetimeArrival' onfocus="(this.type='date')" placeholder='Date of Arrival' required='')
+                        input.costmonitor(type='text' name='dateArrived' onfocus="(this.type='date')" placeholder='Date of Arrival' required='')
                         br
-                        input.costmonitor(type='text' name='timeararrived' onfocus="(this.type='time')" placeholder='Time of Arrival' required='')
+                        input.costmonitor(type='text' name='timeArrived' onfocus="(this.type='time')" placeholder='Time of Arrival' required='')
                         br
                         select.washer(name="washer")
-                            each washer in washers //for each washer who is in that washer list return
+                            each washer in washers 
                                 option(value=washer._id) #{washer.name}
                         br
                         input.costmonitor(type='text' placeholder='Payment')

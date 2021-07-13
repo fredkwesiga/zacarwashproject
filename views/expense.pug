@@ -4,25 +4,32 @@ block content
     body
         .inventheader
             h5(style='font-size: 40px;') Zawash Expenses
+            
+        if alert == "success"
+            div.alert.alert-success Expenses sent.
+        if alert == "error"
+            div.alert.alert-danger Failed to send.  
+
         .expense
-            table.table.table-bordered
-                thead
-                    tr
-                        th.tableheader Date
-                        th.tableheader Inventory
-                        th.tableheader Price
-                tbody
-                    tr
-                        td
-                            input.expenseinput(type='text' onfocus="(this.type='date')" placeholder='Date' required='')
-                        td
-                            select#items
-                                option Items
-                                option Electricity
-                                option Water
-                                option Salaries
+            form(action='/expense' method='POST')
+                table.table.table-bordered
+                    thead
+                        tr
+                            th.tableheader Date
+                            th.tableheader Inventory
+                            th.tableheader Price
+                    tbody
+                        tr
+                            td
+                                input.expenseinput(type='text' onfocus="(this.type='date')" name='dateofExpense' placeholder='Date' required='')
+                            td
+                                select#items(name='item')
+                                    option Items
+                                    option Electricity
+                                    option Water
+                                    option Salaries
+                                br
+                            td
+                                input.expenseinput(type='number' name='price' placeholder='Price' required='')
                             br
-                        td
-                            input.expenseinput(type='number' placeholder='Price' required='')
-                        br
-            button.expensebutton(type='Submit') Send
+                button.expensebutton(type='Submit') Send

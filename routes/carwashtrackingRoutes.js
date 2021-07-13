@@ -6,9 +6,10 @@ const Register = require('../models/Register')
 
 
 router.get('/', async(req,res)=>{
-   let washers = await Register.find(); //mongodb function finds members/objects in register collection
-  res.render('carwashtracking', {title:"CarWash Tracking System", washers: washers})
+   let washerlist = await Register.find(); //mongodb function finds members/objects in register collection
+   res.render('carwashtracking', {title:"CarWash Tracking System", washers: washerlist})
 })
+
 
 // router.post('/', async(req,res)=>{
 //   console.log(req.body)
@@ -20,6 +21,12 @@ router.get('/', async(req,res)=>{
 
 router.post("/", async(req, res) => {
     try {
+        //combining date and time
+        let data = req.body
+        let datetimeArrival = Date.parse(data.dateArrived + 'T' + data.timeArrived)
+        data.datetimeArrival = datetimeArrival
+        
+        console.log(data)
         const carwashmonitor = new Carwashtrack(req.body);
         await carwashmonitor.save()
         res.redirect('carwashtracking?alert=success')

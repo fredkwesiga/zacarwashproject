@@ -18,16 +18,12 @@ const carwashtrackSchema = new mongoose.Schema({
         trim: true,
     },
     datetimeArrival: {
-        type: String,
-        trim: true,
-    },
-    timeararrived:{
-        type: String,
+        type: Date,
         trim: true,
     },
     washer:{
-        type: String,
-        trim: true,
+        type: mongoose.Schema.Types.ObjectId,
+        trim: 'Washer',
     }
 })
 
