@@ -21,6 +21,12 @@ const carwashtrackSchema = new mongoose.Schema({
         type: Date,
         trim: true,
     },
+    packagePrice: {
+        type: Number,
+    },
+    washerFee:{
+        type: Number,
+    },
     washer:{
         type: mongoose.Schema.Types.ObjectId,
         trim: 'Washer',

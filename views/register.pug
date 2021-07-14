@@ -15,7 +15,7 @@ block content
     .container#registerform
       form.register(action='/register' method='POST')
         .form1
-          input.registrationform(type='names' name='name' placeholder='Name' required='')
+          input.registrationform(type='text' name='fullname' placeholder='Name' required='')
           br
           select(name='gender')
             option.gender Gender

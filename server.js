@@ -9,6 +9,7 @@ const registerRoutes = require('./routes/registerRoutes');
 const carwashtrackingRoutes = require('./routes/carwashtrackingRoutes')
 const expenseRoutes = require('./routes/expenseRoutes')
 const homeRoutes = require('./routes/homeRoutes')
+const dashboardRoutes = require('./routes/dashboardRoutes')
 //instantitions
 const app = express();
 
@@ -45,6 +46,7 @@ app.use('/login', loginRoutes)
 app.use('/register', registerRoutes);
 app.use('/carwashtracking', carwashtrackingRoutes);
 app.use('/expense', expenseRoutes);
+app.use('/dashboard', dashboardRoutes);
 
 
 

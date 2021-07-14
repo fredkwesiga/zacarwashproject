@@ -1,0 +1,18 @@
+extends layout 
+
+block content
+     body
+        br
+        table.table.table-bordered 
+            thead 
+                tr 
+                    th Names 
+                    th Number of cars 
+                    th Payout Amount 
+            tbody
+            if washers.length 
+                each washer in washers
+                    tr 
+                        td #{washer.details[0].fullname}
+                        td #{washer.count}
+                        td #{washer.totalPayout}

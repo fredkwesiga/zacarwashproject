@@ -5,19 +5,22 @@ const Carwashtrack = require('../models/Carwashtrack')
 const Register = require('../models/Register')
 
 
+washPackages = {
+    smallcars: { washerFee: 3000, packagePrice: 10000 },
+    mediumcars: { washerFee: 4000, packagePrice: 15000 },
+    fullwash: { washerFee: 5000, packagePrice: 20000 },
+    bodaboda: { washerFee: 1500, packagePrice: 5000 },
+    engine: { washerFee: 2000, packagePrice: 10000 }
+}
+
+
 router.get('/', async(req,res)=>{
    let washerlist = await Register.find(); //mongodb function finds members/objects in register collection
-   res.render('carwashtracking', {title:"CarWash Tracking System", washers: washerlist})
+   console.log(washerlist)
+   res.render('carwashtracking', {title:"CarWash Tracking System", washers:washerlist})
 })
 
 
-// router.post('/', async(req,res)=>{
-//   console.log(req.body)
-//   const carwashtrack = new Carwashtrack(req.body)
-//   carwashtrack.save()
-//       .then(()=>{res.send('Car monitor tracks submitted')})
-//       .catch((err)=>{console.log(err);res.send('No tracking has been submiited')})
-// })
 
 router.post("/", async(req, res) => {
     try {
@@ -25,6 +28,13 @@ router.post("/", async(req, res) => {
         let data = req.body
         let datetimeArrival = Date.parse(data.dateArrived + 'T' + data.timeArrived)
         data.datetimeArrival = datetimeArrival
+
+        //derive package price and washer Fee
+        let packageDetails = washPackages[data.costmonitorpackages]
+ 
+        data.packagePrice = packageDetails['packagePrice']
+        data.washerFee = packageDetails['washerFee']
+
         
         console.log(data)
         const carwashmonitor = new Carwashtrack(req.body);

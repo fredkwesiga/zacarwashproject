@@ -56,19 +56,21 @@ block content
                         input.costmonitor(type='text' name='carcolour' placeholder='Car Colour' required='')
                         br
                         select#costmonitorpackages(style="font-size:15px;" name='costmonitorpackages')
-                            option Package
-                            option Small Cars
-                            option Medium Cars
-                            option Boda Boda
-                            option Engine
+                            option(selected) Package
+                            option(value='smallcars') Small Cars
+                            option(value='mediumcars') Medium Cars
+                            option(value='fullwash') Full Wash
+                            option(value='bodaboda') Boda Boda
+                            option(value='engine') Engine
                     .part2.col-lg-8
                         input.costmonitor(type='text' name='dateArrived' onfocus="(this.type='date')" placeholder='Date of Arrival' required='')
                         br
                         input.costmonitor(type='text' name='timeArrived' onfocus="(this.type='time')" placeholder='Time of Arrival' required='')
                         br
                         select.washer(name="washer")
-                            each washer in washers 
-                                option(value=washer._id) #{washer.name}
+                            if washers.length
+                                each washer in washers 
+                                    option(value=washer._id) #{washer.fullname}
                         br
-                        input.costmonitor(type='text' placeholder='Payment')
+                        
                     button.costmonitorbutton(type='submit') Submit
