@@ -1,0 +1,36 @@
+extends layout
+
+block content
+    body
+        .inventheader
+            h5(style='font-size: 40px;') Zawash Report
+        br
+        form.search(action='/reports')
+            div.form-row
+                div.col-md-8
+                    input.form-control(type="date" name="searchdate" value=defaultDate)
+                div.col-md-4
+                    input.btn.btn-primary.btn-block(type="submit")
+        br
+        table.table.table-bordered 
+            thead
+                tr
+                    th Date of Entry
+                    th Item
+                    th Amount
+            tbody
+            if expenses.length
+                each expense in expenses
+                    tr
+                        td #{moment(expense.dateofExpense).format('YYYY-MM-DD')}
+                        td #{expense.item}
+                        td #{expense.price}
+                tr
+                    th(colspan=2) Total Expenses
+                    td #{new Intl.NumberFormat().format(total.totalExpense)}
+
+
+
+
+
+

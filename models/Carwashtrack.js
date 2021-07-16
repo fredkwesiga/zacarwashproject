@@ -17,6 +17,9 @@ const carwashtrackSchema = new mongoose.Schema({
         type: String,
         trim: true,
     },
+    dateArrived:{
+        type: Date
+    },
     datetimeArrival: {
         type: Date,
         trim: true,

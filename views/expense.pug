@@ -11,7 +11,7 @@ block content
             div.alert.alert-danger Failed to send.  
 
         .expense
-            form(action='/expense' method='POST')
+            form(action='/reports/expense' method='POST')
                 table.table.table-bordered
                     thead
                         tr
@@ -21,15 +21,16 @@ block content
                     tbody
                         tr
                             td
-                                input.expenseinput(type='text' onfocus="(this.type='date')" name='dateofExpense' placeholder='Date' required='')
+                                input.expenseinput(type='text' onfocus="(this.type='date')" name='dateofExpense' placeholder='Date')
                             td
                                 select#items(name='item')
-                                    option Items
-                                    option Electricity
-                                    option Water
-                                    option Salaries
+                                    option(value="polish") Polish
+                                    option(value="electricty") Electricity
+                                    option(value="water") Water
+                                    option(value="salaries") Salaries
                                 br
                             td
-                                input.expenseinput(type='number' name='price' placeholder='Price' required='')
+                                input.expenseinput(type='number' name='price' placeholder='Price')
                             br
                 button.expensebutton(type='Submit') Send
+

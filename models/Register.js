@@ -11,7 +11,6 @@ const registerSchema = new mongoose.Schema({
     },
     dob:{
         type: Date,
-        trim: true,
     },
     nin:{
         type: String,
