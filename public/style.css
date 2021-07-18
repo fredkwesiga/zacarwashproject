@@ -100,7 +100,6 @@ letter-spacing:0.5px;
 
 
 /* stylying the register form */
-
 .zacarwashregister {
     margin-top: 30px;
     background-color: azure;
@@ -238,9 +237,7 @@ hr {
     color: #4087f0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bolder;
-    background-color: azure;
-    
-    
+    background-color: azure;  
 }
 .expenseinput{
     width: 250px;
@@ -269,12 +266,132 @@ hr {
     margin-top: 0px;
     padding: 0px;   
 }
-
 .expensebutton{
     width: 800px;
     height: 40px;
     border: none;
     padding: 0px;
     font-size: 20px;
+}
+
+/* styling the dashboard */
+.dashboardheading{
+    font-size: 40px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    margin-top: 30px;
+    color: #4087f0;
+} 
+
+/* .table.table-bordered{
+    margin: auto;
+    margin-top: 10px;
+    width: 60%;  
+    table-layout: fixed; 
+}  */
+.dashboardhead {
+    color: #4087f0;
+    font-size: 20px;
+    text-align: center;
+    border-bottom: #4087f0 solid 2px;
+} 
+.dashboardtr{
+    padding: 0px;
+    text-align: center;
+} 
+
+/* styling the washer report */
+.washerdetailsreport{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #4087f0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
 
 }
+ .washertable{
+    margin: auto;
+    border: #4087f0 solid 1px;
+    text-align: center;  
+    padding: 10px;
+    table-layout: fixed;
+    width: 70%;
+}
+td, th, tr{
+    margin: auto;
+    margin-top: 5px;
+    border: #4087f0 solid 1px;
+    text-align: center;  
+    padding: 10px;
+    
+} 
+
+/* styling the car wash report */
+ .carwashtrackheading {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 30px;
+    color: #4087f0;
+}
+
+.search{
+    margin: auto;
+    width: 70%;
+}
+.col-md-8{
+    float: left;
+}
+.col-md-4{
+    float: right;
+    padding-left: 10px;
+} 
+.carwashtable{
+    margin: auto;
+    border: #4087f0 solid 1px;
+    text-align: center;  
+    padding: 10px;
+    table-layout: fixed;
+    width: 70%;
+} 
+.carwashtracktd{
+    margin: auto;
+    margin-top: 5px;
+    border: #4087f0 solid 1px;
+    text-align: center;  
+    padding: 10px;   
+}
+/* styling the expense report */
+.expensereporttable{
+    margin: auto;
+    border: #4087f0 solid 1px;
+    text-align: center;  
+    padding: 10px;
+    table-layout: fixed;
+    width: 70%;
+}
+
+/* style register manager page */
+.Addmanagertitle{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bolder;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-shadow:2px 2px rgb(8, 240, 131);
+    margin: 30px;
+    color: #4087f0;
+}
+.managerform{
+    margin: auto;
+    width: 40%;
+    height: 50%;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid rgb(174, 171, 171);
+}
+.btn.btn-primary{
+    width: 100%;
+}
+

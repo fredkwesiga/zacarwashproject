@@ -1,28 +1,29 @@
 extends layout
-
 block content
-    body 
-        br
-        form.search(action='/reports/carwashtracking')
+    body
+        .carwashtrackheading 
+            h7 Car wash tracking Report
+        form.search(action='/carwashtrackingreport')
             div.form-row
                 div.col-md-8
                     input.form-control(type="date" name="searchdate" value=defaultDate)
                 div.col-md-4
                     input.btn.btn-primary.btn-block(type="submit")
-        br
-        table.table.table-bordered 
+
+
+        table.carwashtable
             thead
                 tr
                     th Date of Arrival
                     th Vehicle
                     th Amount
-            tbody
+                tbody
             if collections.length
                 each collection in collections
                     tr
-                        td #{moment(collection.dateArrived).format('DD-MM-YYYY hh:mm')}
-                        td #{collection.carnumberplate}
-                        td #{collection.packagePrice}
+                        td.carwashtracktd #{moment(collection.dateArrived).format('DD-MM-YYYY hh:mm')}
+                        td.carwashtracktd  #{collection.carnumberplate}
+                        td.carwashtracktd  #{collection.packagePrice}
                 tr
                     th(colspan=2) Total Collections
                     td #{new Intl.NumberFormat().format(total.totalCollection)}

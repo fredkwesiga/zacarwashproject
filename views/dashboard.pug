@@ -2,17 +2,19 @@ extends layout
 
 block content
      body
+        .dashboardheading
+            h6(style='font-size: 40px;')  Cars Washed & Amount
         br
-        table.table.table-bordered 
-            thead 
-                tr 
+        table.table.table-bordered.shadow-lg
+            thead.dashboardhead 
+                tr
                     th Names 
                     th Number of cars 
                     th Payout Amount 
             tbody
             if washers.length 
                 each washer in washers
-                    tr 
+                    tr.dashboardtr 
                         td #{washer.details[0].fullname}
                         td #{washer.count}
                         td #{washer.totalPayout}

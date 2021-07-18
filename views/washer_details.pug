@@ -2,35 +2,28 @@ extends layout
 
 block content
     body
-        br
-        .container
-            form.search(action='/reports')
-                div.form-row
-                    div.col-md-8
-                        input.form-control(type="date" name="searchdate" value=defaultDate)
-                    div.col-md-4
-                        input.btn.btn-primary.btn-block(type="submit")
-            br
-            table.table.table-bordered 
-                thead
-                    tr
-                        th Name 
-                        th Gender
-                        th Date of Birth
-                        th Enter ID Number
-                        th Place of residence
-                        th Employees ID
-                tbody
-                    if users.length
-                        each user in users
-                            tr
-                                td #{user.fullname}
-                                td #{user.nin}
-                                td #{moment(user.dob).format('DD/MM/YYYY')}
-                                td #{user.phonenumber}
-                                td #{user.gender}
-                                td #{user.residence}
-                                td
-                                    form(method="post" action='/register/delete-washer')
-                                        input(type="hidden", placeholder="", name="id", value=user._id)
-                                        button.btn.btn-primary.btn-block(type="submit") Delete
+        .washerdetailsreport
+            h9 Washer Details
+        table.washertable
+            thead
+                tr
+                    th Name 
+                    th Gender
+                    th Date of Birth
+                    th ID Number
+                    th Residence
+                    th ZawashID
+            tbody
+                if users.length
+                    each user in users
+                        tr
+                            td #{user.fullname}
+                            td #{user.gender}
+                            td #{moment(user.dob).format('DD/MM/YYYY')}
+                            td #{user.nin}
+                            td #{user.placeofresidence}
+                            td #{user.zacarids}
+                            td
+                                form(method="post" action='/register/delete-washer')
+                                    input(type="hidden", placeholder="", name="id", value=user._id)
+                                    button.btn.btn-primary.btn-block(type="submit") Delete

@@ -13,24 +13,26 @@ block content
     
     
     .container#registerform
-      form.register(action='/register' method='POST')
+      form.register#register(action='/register' method='POST' name="registerform" onsubmit="return register();")
         .form1
-          input.registrationform(type='text' name='fullname' placeholder='Name' required='')
+          small#fullnameerror
+          input.registrationform(type='text'  name='fullname' placeholder='Name')
           br
           select(name='gender')
             option.gender Gender
             option Female
             option Male
           br
-          input.registrationform(type='text' onfocus="(this.type='date')" name='dob' placeholder='Date Of Birth' required='')
+          input.registrationform#dateofbirth(type='text' onfocus="(this.type='date')" name='dob'  placeholder='Date Of Birth')
           br
         .form2
-          input.registrationform(type='text' name='nin' placeholder='Enter ID Number' required='')
+          input.registrationform(type='text' name='nin' placeholder='Enter ID Number')
           br
-          input.registrationform(type='text' name='placeofresidence' placeholder='Place of Residence.' required='')
+          input.registrationform(type='text' name='placeofresidence'  placeholder='Place of Residence.')
           br
-          input.registrationform(type='text and number' name='zacarids' placeholder='Employes IDs' required='') 
+          input.registrationform(type='text and number' name='zacarids'  placeholder='Employes IDs') 
         br
         br
         br
-        button.buttonregistration Submit
+        button.buttonregistration(type='') Submit
+        

@@ -8,7 +8,7 @@ const router = express.Router();
 
 
 
-router.get('/expense', async (req, res) => {
+router.get('/expensereport', async (req, res) => {
        try {
         let selectedDate = moment().format('YYYY-MM-DD')
         if (req.query.searchdate)
@@ -37,7 +37,7 @@ router.get('/expense', async (req, res) => {
     }
 })
 
-router.get('/carwashtracking', async (req, res) => {
+router.get('/carwashtrackingreport', async (req, res) => {
     try {
         let selectedDate = moment().format('YYYY-MM-DD')
         if (req.query.searchdate)
@@ -66,7 +66,7 @@ router.get('/carwashtracking', async (req, res) => {
 })
 
 
-router.get('/washer-details', async (req, res) => {
+router.get('/washer-detailsreport', async (req, res) => {
     try {
         // find all the data in the Washers collection
         let washerDetails = await Register.find();
@@ -76,7 +76,5 @@ router.get('/washer-details', async (req, res) => {
         res.send('Failed to retrive washer details');
     }
 })
-
-
 
 module.exports = router;

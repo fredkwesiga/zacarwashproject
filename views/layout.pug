@@ -10,7 +10,7 @@ head
   script(src='zacarwash.js')
 
 body       
-    nav.navbar.navbar-expand-lg.navbar-.lighter.bg-lighter
+    nav.navbar.navbar-expand-lg.navbar-.light.bg-light
       .container-fluid
         a.navbar-brand(href='#')
           img#imglogo(src='/Images/za car wash logo-01.png' alt='...')
@@ -35,15 +35,11 @@ body
             li.nav-item
               a.nav-link(href='/dashboard') Dash-Board
             li.nav-item.dropdown
-              a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='/reports' role='button' data-bs-toggle='dropdown' aria-expanded='false')
-                | Reports 
-              ul.dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
-                li
-                  a.dropdown-item(href='/reports/expense') Expense Report
-                li
-                  a.dropdown-item(href='/reports/carwashtracking') Carwash Tracking
-                li
-                  a.dropdown-item(href='/reports/washer-details') Washer Details
+              a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='' role='button' data-bs-toggle='dropdown' aria-expanded='false') Reports 
+              .dropdown-menu
+                  a.dropdown-item(href='/expensereport') Expense Report
+                  a.dropdown-item(href='/carwashtrackingreport') Carwash Tracking
+                  a.dropdown-item(href='/washer-detailsreport') Washer Details
 block content 
 footer.row.justify-content-center
         div.col-md-6

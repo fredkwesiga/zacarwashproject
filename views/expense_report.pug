@@ -5,14 +5,14 @@ block content
         .inventheader
             h5(style='font-size: 40px;') Zawash Report
         br
-        form.search(action='/reports')
+        form.search(action='/expensereport')
             div.form-row
                 div.col-md-8
                     input.form-control(type="date" name="searchdate" value=defaultDate)
                 div.col-md-4
                     input.btn.btn-primary.btn-block(type="submit")
         br
-        table.table.table-bordered 
+        table.expensereporttable 
             thead
                 tr
                     th Date of Entry
@@ -22,9 +22,9 @@ block content
             if expenses.length
                 each expense in expenses
                     tr
-                        td #{moment(expense.dateofExpense).format('YYYY-MM-DD')}
-                        td #{expense.item}
-                        td #{expense.price}
+                        td.expensereporttd #{moment(expense.dateofExpense).format('YYYY-MM-DD')}
+                        td.expensereporttd #{expense.item}
+                        td.expensereporttd #{expense.price}
                 tr
                     th(colspan=2) Total Expenses
                     td #{new Intl.NumberFormat().format(total.totalExpense)}

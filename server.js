@@ -58,13 +58,13 @@ passport.use(Manager.createStrategy());
 passport.serializeUser(Manager.serializeUser());
 passport.deserializeUser(Manager.deserializeUser());
 
-var loginChecker = function (req, res, next) {
-  if (req.path != '/login' && !req.session.user) {
-    res.redirect('/login')
-  }
-  next()
-}
-app.use(loginChecker)
+// var loginChecker = function (req, res, next) {
+//   if (req.path != '/login' && !req.session.user) {
+//     res.redirect('/login')
+//   }
+//   next()
+// }
+// app.use(loginChecker)
 
 
 
@@ -76,7 +76,7 @@ app.use('/register', registerRoutes);
 app.use('/carwashtracking', carwashtrackingRoutes);
 app.use('/expense', expenseRoutes);
 app.use('/dashboard', dashboardRoutes);
-app.use('/reports', reportRoutes);
+app.use('/', reportRoutes);
 
 
 
