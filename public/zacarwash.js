@@ -1,31 +1,42 @@
 
 //validating register form
 let register =() =>{
+    
     //validing fullnames
     let fullname = document.registerform.fullname
-    let fullnames = /^[A-Za-z]+$/
-    if(fullname.value ==''){
-        fullname.style.border = "2px solid red";
-    }
-    else if(fullname.value.length <=8 && fullname.value.match(fullnames)) {
-        fulllname.style.border = "2px solid green"
-    }
-
-    //validating date of birth
-    let dob = document.registerform.dob
-    if(dob.value !== ""){
-          dob.style.border = "2px solid green";
+    let fullnames = /^([a-zA-Z'-.].+[a-zA-Z'-.]+)$/;
+    if(!fullname.value.match(fullnames)){
+        fullname.style.border = "2px solid red"
+        return false;    
     }
     else{
-        dob.style.border = '2px solid red'
+        fullname.style.border = "2px solid green"
+    }
+    if(fullname.value.length <8 ){
+        fullname.style.border = "2px solid red"; 
+        return false;      
+    }
+    else{
+        fullname.style.border = "2px solid green"
+    }
+    
+    //validating date of birth
+    let dob = document.registerform.dob
+    if(dob.value == ""){
+          dob.style.border = "2px solid red";
+          return false;
+    }
+    else{
+        dob.style.border = '2px solid green'
     }
     //validating gender.(not working ask Irene)
     // let gender = document.registerform.gender
-    // if(gender.value !== ""){
-    //       genderstyle.border = "2px solid green";
+    // if(gender.value == ""){
+    //       gender.style.border = "2px solid red";
+    //       return false;
     // }
     // else{
-    //     gender.style.border = '2px solid red'
+    //     gender.style.border = "2px solid green";
     // }
 
     
@@ -42,39 +53,46 @@ let register =() =>{
     
     //validating place of residence.
     let placeofresidence = document.registerform.placeofresidence
-    if(placeofresidence.value != ""){
-        placeofresidence.style.border = "2px solid green"
+    let residence = /^[A-Za-z]+$/
+    if(!placeofresidence.value.match(residence)){
+        placeofresidence.style.border = "2px solid red"  
+        return false;   
     }
     else{
-        placeofresidence.style.border = "2px solid red"
+        placeofresidence.style.border = "2px solid green"
     }
+    
 
-    //validating emplooyes id--Zwash
+    //validating emplooyes id--Zwash...find our how to do hardcore validation
     let zacarids = document.registerform.zacarids
     let zacarid = /^[0-9]+$/
-    if(zacarids.value.match(zacarid) && zacarids.length== 3){
-        zacarids.style.border = "2px solid green";
+    if(!zacarids.value.match(zacarid) && zacarids.length== 3){
+        zacarids.style.border = "2px solid red";
+        return false;
     }
     else{
         zacarids.style.border = "2px solid red";
     }
 }
-if(register()){}
-button.addEventListener('click', (register))
-e.preventDefault()
+button.addEventListener('submit', (register))
+
 
 // validating register manager page
-// let validation = ()=>{
+//let registerManager = ()=>{
 
-//     //validating email.
-//    let emailAddress = document.managerform.emailAddress
+    //validating email.
+//    let emailAddress = document.registerManager.emailAddress
 //    let email = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/
-//     if(emailAddress.value.match(email)){
-//         emailAddress.style.border = '1px solid green'
+//     if(!emailAddress.value.match(email)){
+//         emailAddress.style.border = '2px solid red'
+//         fullnameerror.innerHTML = "Please fill in correct email"
+//         fullnameerror.style = "font-size: 20px, color:red"
+//         return false;
 //     }
 //     else{
-//         emailAddress.style.border = '1px solid red'
-//     }  
+//         emailAddress.style.border = '2px solid green'
+//     } 
+   
     //defining variables
 //     let password = document.getElementById("password");
 //     let passwordd = /^[0-9a-zA-Z]+$/
@@ -92,8 +110,7 @@ e.preventDefault()
 //         error2.innerHTML = 'Put correct password.'
 //         error2.style = 'font-size: 12px; color: red;'
         
-//     }
-    
-   
-// }
+//     } 
+ //}
+ //button.addEventListener('submit', (registerManager))
 

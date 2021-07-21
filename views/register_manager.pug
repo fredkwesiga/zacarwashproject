@@ -3,13 +3,13 @@ extends layout
 block content
     body
         br
-        if alert == "success"
-            div.alert.alert-success Manager added successfully
-        if alert == "error"
-            div.alert.alert-danger An error occurred, failed to add manager
+        //- if alert == "success"
+        //-     div.alert.alert-success Manager added successfully
+        //- if alert == "error"
+        //-     div.alert.alert-danger An error occurred, failed to add manager
         .Addmanagertitle 
             h8 Register New Manager   
-        form.managerform.shadow-lg(method="POST" action='/manager' name='managerform')
+        form.managerform.shadow-lg(method="POST" action='/manager' name='registerManager' onsubmit="return registerManager();" )
             div.form-row
                 div.col.form-group
                     lable Email Address
@@ -21,5 +21,5 @@ block content
                 br    
             div.form-row
                 div.col.form-group
-                    button.btn.btn-primary.btn-block Add manager
+                    button.btn.btn-primary.btn-block(type='submit') Add manager
                             

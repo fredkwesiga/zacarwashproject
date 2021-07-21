@@ -28,8 +28,10 @@ const app = express();
 // mongodb connection
 mongoose.connect(process.env.DATABASE, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  useCreateIndex: true
 });
+
 
 mongoose.connection
   .on('open', () => {
