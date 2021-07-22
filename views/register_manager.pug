@@ -3,23 +3,35 @@ extends layout
 block content
     body
         br
-        //- if alert == "success"
-        //-     div.alert.alert-success Manager added successfully
-        //- if alert == "error"
-        //-     div.alert.alert-danger An error occurred, failed to add manager
+        if alert == "success"
+            div.alert.alert-success Manager added successfully
+        if alert == "error"
+            div.alert.alert-danger An error occurred, failed to add manager
         .Addmanagertitle 
             h8 Register New Manager   
-        form.managerform.shadow-lg(method="POST" action='/manager' name='registerManager' onsubmit="return registerManager();" )
+        form.managerform.shadow-lg(method="POST" action='/manager' name='newManager' onsubmit="return registerManager();" )
             div.form-row
                 div.col.form-group
+                    lable Full Names
+                    small#errorfullnames
+                    input.form-control(name="fullnames")
+                br
+                div.col.form-group
                     lable Email Address
+                    small#erroremail
                     input.form-control(name="emailAddress")
                 br    
                 div.col.form-group
                     lable Password
+                    small#passworderror
                     input.form-control(type="password" name="password")
                 br    
             div.form-row
                 div.col.form-group
-                    button.btn.btn-primary.btn-block(type='submit') Add manager
+                    button.btn.btn-dark.btn-block(type='submit') Add manager
+                    | Click 
+                    a(href='https://accounts.google.com/signup/v2/webcreateaccount?hl=en&flowName=GlifWebSignIn&flowEntry=SignUp') Sign Up
+                
+
+                    
                             

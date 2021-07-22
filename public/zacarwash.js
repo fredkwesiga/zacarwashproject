@@ -1,5 +1,6 @@
 
 //validating register form
+//validating using form name and input name.
 let register =() =>{
     
     //validing fullnames
@@ -77,40 +78,5 @@ let register =() =>{
 button.addEventListener('submit', (register))
 
 
-// validating register manager page
-//let registerManager = ()=>{
 
-    //validating email.
-//    let emailAddress = document.registerManager.emailAddress
-//    let email = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/
-//     if(!emailAddress.value.match(email)){
-//         emailAddress.style.border = '2px solid red'
-//         fullnameerror.innerHTML = "Please fill in correct email"
-//         fullnameerror.style = "font-size: 20px, color:red"
-//         return false;
-//     }
-//     else{
-//         emailAddress.style.border = '2px solid green'
-//     } 
-   
-    //defining variables
-//     let password = document.getElementById("password");
-//     let passwordd = /^[0-9a-zA-Z]+$/
-//     let error2 = document.getElementById("error2")
-//     if(password.value ==''){
-//         password.style.border = "1px solid red";
-//     }
-//     let passwordval = document.managerform.password
-//     if(passwordval.value.match(passwordd)){
-//         passwordval.style.border = '1px solid green'
-//         error2.innerHTML = ''
-//     }
-//     else{
-//         passwordval.style.border = '1px solid red'
-//         error2.innerHTML = 'Put correct password.'
-//         error2.style = 'font-size: 12px; color: red;'
-        
-//     } 
- //}
- //button.addEventListener('submit', (registerManager))
 
