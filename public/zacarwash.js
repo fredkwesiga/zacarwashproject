@@ -40,17 +40,27 @@ let register =() =>{
     //     gender.style.border = "2px solid green";
     // }
 
-    
+
     //validating NIN
     let nin = document.registerform.nin
     let ninnumber = /^[A-Za-z-0-9]+$/
-    if (nin.value ==''){
-        nin.style.border = "2px solid red";
-    
-    }
-    else if (nin.value.match(ninnumber) || nin.length==11){
-        nin.style.border = "2px solid green";
-    }
+    //  if (!(nin.value.match(ninnumber) && nin.length==11)){
+    //     nin.style.border = "2px solid red";
+    //     return false;
+    // }
+    // else{
+    //     nin.style.border = "2px solid green"
+    // }
+
+    if (!(nin.value.length==11)) {
+        nin.style.border = "1px solid red"
+       return false;
+    } else if (nin.value.length == 11 && nin.value.match(ninnumber)) {
+        nin.style.border = "1px solid green"
+    } else if (!(nin.value.length ==11 && nin.value.match(ninnumber))) {
+        nin.style.border = "1px solid red"
+        return false;
+    }   
     
     //validating place of residence.
     let placeofresidence = document.registerform.placeofresidence
@@ -62,21 +72,20 @@ let register =() =>{
     else{
         placeofresidence.style.border = "2px solid green"
     }
-    
 
     //validating emplooyes id--Zwash...find our how to do hardcore validation
     let zacarids = document.registerform.zacarids
-    let zacarid = /^[0-9]+$/
-    if(!zacarids.value.match(zacarid) && zacarids.length== 3){
-        zacarids.style.border = "2px solid red";
+    let zaemployeeid = /^Zwash([0-9]{3})$/;
+    if (!(zacarids.value.length ==8 )) {
+        zacarids.style.border = "1px solid red"
+       return false;
+    } else if ((zacarids.value.length== 8) && (zacarids.value.match(zaemployeeid))) {
+        zacarids.style.border = "1px solid green"
+    } else if (!(zacarids.value.match(zaemployeeid))) {
+        zacarids.style.border = "1px solid red"
         return false;
-    }
-    else{
-        zacarids.style.border = "2px solid red";
-    }
+    }    
+
 }
 button.addEventListener('submit', (register))
-
-
-
 

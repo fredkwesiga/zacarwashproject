@@ -22,8 +22,8 @@ router.get('/expensereport', async (req, res) => {
         // query for total expense on a day
         let totalExpense = await Expenses.aggregate([
             
-            { $match: { dateofExpense: new Date(selectedDate) } },
-            { $group: { _id: '$dateofExpense', totalExpense: { $sum: '$price' } } }
+            { $match: { dateofExpense: new Date(selectedDate) } },//match date of expense on that very day
+            { $group: { _id: '$dateofExpense', totalExpense: { $sum: '$price' } } } //grouping the date of expense and its price/fee
         ])
         console.log(totalExpense)
 

@@ -16,7 +16,8 @@ washPackages = {
 
 
 router.get('/', async(req,res)=>{
-   let washerlist = await Register.find(); //mongodb function finds members/objects in register collection
+    //This is a mongodb function that finds members/objects in register collection
+   let washerlist = await Register.find(); 
    console.log(washerlist)
    res.render('carwashtracking', {title:"CarWash Tracking System", washers:washerlist})
 })

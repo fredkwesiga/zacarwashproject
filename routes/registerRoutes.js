@@ -13,6 +13,8 @@ router.get('/',(req,res)=>{
 //     .then(()=>{res.send("The data has been submitted")})
 //     .catch((err)=>{console.log(err);res.send("Data not submitted")})
 // })
+
+//
 router.post("/", async(req, res) => {
     try {
         const register = new Register(req.body);

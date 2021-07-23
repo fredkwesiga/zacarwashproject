@@ -9,9 +9,9 @@ const managerSchema = new mongoose.Schema({
         unique: true,
         trim: true,
       },
-    password: {
-        type: String
-          },
+    // password: {
+    //     type: String
+    //       },
 
   });
 

@@ -108,7 +108,7 @@ letter-spacing:0.5px;
     text-align: center;  
 }
 .register {
-    background: rgb(149, 184, 248); 
+    background: linear-gradient(to left, #949090b8, #4087f0b9), url("/images/wash-interior.jpeg");  
     width: 650px;
     height: 300px;
     border-radius: 10px;
@@ -219,7 +219,7 @@ hr {
 } 
 #costmonitorpackages{
     margin-top: 20px;
-    width: 90%;
+    width: 95%;
     height: 40px;
     border-radius: 0px; 
     padding: 5px;
@@ -374,6 +374,8 @@ td, th, tr{
 }
 
 /* style register manager page */
+
+
 .Addmanagertitle{
     text-align: center;
     font-size: 30px;
@@ -384,6 +386,7 @@ td, th, tr{
     color: #4087f0;
 }
 .managerform{
+    /* background: url(/images/car.jpeg); */
     margin: auto;
     width: 45%;
     height: 60%;
