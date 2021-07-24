@@ -12,6 +12,9 @@
     width: 700px;
     
 }
+/* .navbar-nav{
+    color: black;
+} */
 
 /* styles the home page */
 #welcome {
@@ -75,6 +78,7 @@ letter-spacing:0.5px;
 	background-position: center;
 }
 /* container for login page */
+
 .container {
 	/* height: 80%; */
     width: 200%;
@@ -83,23 +87,29 @@ letter-spacing:0.5px;
 	align-items: center;
 	max-width: 765px;
 	margin-top: 20px;
+    color: white;
 }
 .form-control-lg {
     height: 20px;
     float: right; 
 }
 .navbar-expand-lg{
-    margin-top: 20px;
+    margin-top: 20px;   
 }
+
 .copyright{
     text-align: center;
-    font-size: 15px;
+    font-size: 18px;
     /* margin-left: 67%; */
-    color: rgba(116, 113, 113, 0.7);
+    color: rgba(6, 6, 6, 0.7);
 }
 
 
 /* stylying the register form */
+#registerpage {
+    background: rgb(255, 254, 254);
+    background: linear-gradient(90deg, rgb(242, 242, 242, 0.3) 0%, rgb(109, 153, 240) 210%);
+}
 .zacarwashregister {
     margin-top: 30px;
     background-color: azure;
@@ -153,6 +163,11 @@ button:hover{
 }
 
 /* styling the carwashtracker form */
+#carwashbody{
+   background: rgb(255, 254, 254);
+   background: linear-gradient(90deg, rgb(242, 242, 242, 0.3) 0%, rgb(109, 153, 240) 210%);  
+}
+
 .carwashtrack{
     font-size: 30px;
     text-align: center;
@@ -231,16 +246,22 @@ hr {
     padding: 0px;
 }
 /* styling the expense.html */
+#expensebody{
+
+    background-image: linear-gradient(90deg, rgb(242, 242, 242, 0.3) 0%, rgb(109, 153, 240) 210%);
+}
 .inventheader{
     text-align: center;
-    margin-top: 40px;
-    color: #4087f0;
+    color: black;
+    margin-top: 20px;
+    font-size: 40px;
+    text-shadow: 2px 2px aliceblue;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bolder;
-    background-color: azure;  
 }
 .expenseinput{
     width: 250px;
+    
 }
 
 .expense{
@@ -257,6 +278,10 @@ hr {
 }
 .table-bordered{
     border: #9cbff4;
+    box-shadow: 4px 4px 2px #464646;
+    background-color: white;
+    height: 100px;
+    
 }
 #items{
     border: 1px solid;
@@ -264,7 +289,8 @@ hr {
     height: 30px;
     border-radius: 0px;
     margin-top: 0px;
-    padding: 0px;   
+    padding: 0px;
+    background-color: aliceblue;   
 }
 .expensebutton{
     width: 800px;
