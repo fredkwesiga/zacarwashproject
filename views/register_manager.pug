@@ -1,12 +1,12 @@
 extends layout
 
 block content
-    body
+    body#managerpage
         if alert == "success"
             div.alert.alert-success Manager added successfully
         if alert == "error"
             div.alert.alert-danger An error occurred, failed to add manager
-    
+       
         .Addmanagertitle 
             h8 Register New Manager   
         form.managerform.shadow-lg(method="POST" action='/manager' name='newManager' onsubmit="return registerManager();" )
@@ -29,8 +29,8 @@ block content
             div.form-row
                 div.col.form-group
                     button.btn.btn-dark.btn-block(type='submit') Add manager
-                    | Click 
-                    a(href='https://accounts.google.com/signup/v2/webcreateaccount?hl=en&flowName=GlifWebSignIn&flowEntry=SignUp') Sign Up
+                    | Don't have an e-mail?
+                    a(href='https://accounts.google.com/signup/v2/webcreateaccount?hl=en&flowName=GlifWebSignIn&flowEntry=SignUp') Create an account.
                 
 
                     
