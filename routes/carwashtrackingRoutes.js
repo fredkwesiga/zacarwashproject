@@ -5,7 +5,7 @@ const Carwashtrack = require('../models/Carwashtrack')
 const Register = require('../models/Register')
 const moment = require('moment');
 
-
+//In-memory database that attaches different fees for packages, helps us save fee to the database
 washPackages = {
     smallcars: { washerFee: 3000, packagePrice: 10000 },
     mediumcars: { washerFee: 4000, packagePrice: 15000 },
@@ -27,13 +27,16 @@ router.get('/', async(req,res)=>{
 router.post("/", async(req, res) => {
     try {
         //combining date and time
-        let data = req.body
+        let data = req.body //req.body is the data coming from the body. Has all data coming from the carwash track
         let datetimeArrival = Date.parse(data.dateArrived + 'T' + data.timeArrived)
         data.datetimeArrival = datetimeArrival
 
         //derive package price and washer Fee
+        //using washPackages one is able to derive the particular details of that package
+        
         let packageDetails = washPackages[data.costmonitorpackages]
- 
+           
+       
         data.packagePrice = packageDetails['packagePrice']
         data.washerFee = packageDetails['washerFee']
 

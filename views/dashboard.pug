@@ -2,19 +2,19 @@ extends layout
 
 block content
 
-     body
+     body#dashboardbody
         .dashboardheading
             h6(style='font-size: 40px;')  Cars Washed & Amount
         br
-        form.search(action='/dashboard')
+        form.search#dashboardsearch(action='/dashboard')
                 div.form-row
                     div.col-md-8
-                        input.form-control(type="date" name="searchdate" value=defaultDate)
+                        input.form-control.shadow-lg#datedashboard(type="date" name="searchdate" value=defaultDate)
                     div.col-md-4
-                        input.btn.btn-primary.btn-block(type="submit")
+                        input.btn.btn-primary.btn-block#dashboardbutton(type="submit")
         br        
 
-        table.table.table-bordered.shadow-lg
+        table.expensetable.shadow-lg
             thead.dashboardhead 
                 tr
                     th Names 

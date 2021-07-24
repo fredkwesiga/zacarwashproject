@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
         //  &  payout per washer.
         let washedVehicles = await Carwashtrack.aggregate(
             [ {$match: { dateArrived: new Date(selectedDate) }},
-            { $group: { _id: '$washer', count: { $sum: 1 }, totalPayout: { $sum: '$washerFee' } } },
+            { $group: { _id: '$washer', count: { $sum: 1 }, totalPayout: { $sum: '$washerFee' } } }, //group all this data per washer and count or add each car
             { $lookup: { from: 'registers', localField: '_id', foreignField: '_id', as: "details" } }
             ])
         // get the total payout for all the washers based on the selected date

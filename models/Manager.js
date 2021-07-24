@@ -7,7 +7,7 @@ const managerSchema = new mongoose.Schema({
         type: String,
         required: "Please provide user name",
         unique: true,
-        trim: true,
+        trim: true, //trim property given to a string
       },
     // password: {
     //     type: String

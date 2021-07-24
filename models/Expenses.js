@@ -6,7 +6,7 @@ const expenseSchema = new mongoose.Schema({
     },
     item:{
         type: String,
-        trim: true,
+        trim: true, //trim property given to a string
     },
     price:{
         type: Number,

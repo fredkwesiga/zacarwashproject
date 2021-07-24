@@ -30,15 +30,15 @@ let register =() =>{
     else{
         dob.style.border = '2px solid green'
     }
-    //validating gender.(not working ask Irene)
-    // let gender = document.registerform.gender
-    // if(gender.value == ""){
-    //       gender.style.border = "2px solid red";
-    //       return false;
-    // }
-    // else{
-    //     gender.style.border = "2px solid green";
-    // }
+    //validating gender.
+    let gender = document.registerform.gender
+    if(gender.value == ""){
+          gender.style.border = "2px solid red";
+          return false;
+    }
+    else{
+        gender.style.border = "2px solid green";
+    }
 
 
     //validating NIN

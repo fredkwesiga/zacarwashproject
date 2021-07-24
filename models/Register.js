@@ -7,7 +7,7 @@ const registerSchema = new mongoose.Schema({
     },
     gender:{
         type: String,
-        trim: true,
+        trim: true,  //trim property given to a string
     },
     dob:{
         type: Date,

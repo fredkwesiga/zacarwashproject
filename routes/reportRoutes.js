@@ -3,13 +3,14 @@ const mongoose = require('mongoose');
 const Expenses = require('../models/Expenses')
 const Carwashtrack = require('../models/Carwashtrack')
 const Register = require('../models/Register')
-const moment = require('moment');
+const moment = require('moment'); //moment aids us to format or get the date
 const router = express.Router();
 
 
 
 router.get('/expensereport', async (req, res) => {
        try {
+         //using moment to get the selected date or default date  
         let selectedDate = moment().format('YYYY-MM-DD')
         if (req.query.searchdate)
             selectedDate = moment(req.query.searchdate).format('YYYY-MM-DD')
