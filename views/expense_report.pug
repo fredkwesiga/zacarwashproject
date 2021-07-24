@@ -1,16 +1,16 @@
 extends layout
 
 block content
-    body
+    body#carwashbody
         .inventheader
             h5(style='font-size: 40px;') Zawash Report
         br
         form.search(action='/expensereport')
             div.form-row
                 div.col-md-8
-                    input.form-control(type="date" name="searchdate" value=defaultDate)
+                    input.form-control#datecarwashtrack(type="date" name="searchdate" value=defaultDate)
                 div.col-md-4
-                    input.btn.btn-primary.btn-block(type="submit")
+                    input.btn.btn-primary.btn-block#carwashbutton(type="submit")
         br
         table.expensereporttable 
             thead
@@ -27,7 +27,7 @@ block content
                         td.expensereporttd #{expense.price}
                 tr
                     th(colspan=2) Total Expenses
-                    td #{new Intl.NumberFormat().format(total.totalExpense)}
+                    th #{new Intl.NumberFormat().format(total.totalExpense)}
 
 
 

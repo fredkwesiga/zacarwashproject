@@ -44,26 +44,19 @@ block content
                                 li.list-group-item 10,000 Ush
         hr
         .carwashtrack
-            h4
-                strong Car Wash Tracking
-            .container
+            h2 Car Wash Tracking
+            .container-tracking
                 form.costmonitorform(action='/carwashtracking' method='POST' name='costmonitorform' onsubmit="return costmonitorForm();")
                     .part1.col-lg-8
             
-                        input.costmonitor(type='text' name='carmodel' placeholder='Car Model')
+                        input.costmonitor(type='text'  name='carmodel' placeholder='Car Model')
                         br
                         small#errorplate
                         input.costmonitor(type='text'  name='carnumberplate' placeholder='Car Number plate')
                         br
                         input.costmonitor(type='text' name='carcolour' placeholder='Car Colour')
                         br
-                        select#costmonitorpackages(style="font-size:15px;" name='costmonitorpackages')
-                            option(value='') Package
-                            option(value='smallcars') Small Cars
-                            option(value='mediumcars') Medium Cars
-                            option(value='fullwash') Full Wash
-                            option(value='bodaboda') Boda Boda
-                            option(value='engine') Engine
+                       
                     .part2.col-lg-8
                         input.costmonitor(type='text' name='dateArrived' onfocus="(this.type='date')" placeholder='Date of Arrival')
                         br
@@ -74,5 +67,11 @@ block content
                                 each washer in washers 
                                     option(value=washer._id) #{washer.fullname}
                         br
-                        
+                    select#costmonitorpackages( name='costmonitorpackages')
+                        option(value='') Package
+                        option(value='smallcars') Small Cars
+                        option(value='mediumcars') Medium Cars
+                        option(value='fullwash') Full Wash
+                        option(value='bodaboda') Boda Boda
+                        option(value='engine') Engine                       
                     button.costmonitorbutton(type='submit') Submit

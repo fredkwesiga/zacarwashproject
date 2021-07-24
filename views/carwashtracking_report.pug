@@ -1,14 +1,14 @@
 extends layout
 block content
-    body
+    body#carwashbody
         .carwashtrackheading 
             h7 Car wash tracking Report
-        form.search(action='/carwashtrackingreport')
+        form.search#searchcarwash(action='/carwashtrackingreport')
             div.form-row
                 div.col-md-8
-                    input.form-control(type="date" name="searchdate" value=defaultDate)
+                    input.form-control#datecarwashtrack(type="date" name="searchdate" value=defaultDate)
                 div.col-md-4
-                    input.btn.btn-primary.btn-block(type="submit")
+                    input.btn.btn-primary.btn-block#carwashbutton(type="submit")
 
 
         table.carwashtable
@@ -26,4 +26,4 @@ block content
                         td.carwashtracktd  #{collection.packagePrice}
                 tr
                     th(colspan=2) Total Collections
-                    td #{new Intl.NumberFormat().format(total.totalCollection)}
+                    th #{new Intl.NumberFormat().format(total.totalCollection)}
