@@ -23,6 +23,7 @@ let register =() =>{
     
     //validating date of birth
     let dob = document.registerform.dob
+    let dobval = /^(0[1-9]|1[0-2])-([1-9]|[12][0-9]|3[01])-(19[5-9][0-9]|20[0-4]|2003)$/
     if(dob.value == ""){
           dob.style.border = "2px solid red";
           return false;
