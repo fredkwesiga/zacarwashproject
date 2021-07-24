@@ -13,18 +13,15 @@ let costmonitorForm =(e) =>{
     
     //validating car number plate
     let carnumberplate = document.costmonitorform.carnumberplate
-    let errorcarnumberplate = document.getElementById(errorplate)
     let carplate =  /^([A-Z]{3}.*[\s\.]*[0-9]{3}[A-Z]{1})$/
-    if(!carnumberplate.value.trim(carplate)){
+    if(!carnumberplate.value.match(carplate)){
           carnumberplate.style.border = "2px solid red";
-          errorcarnumberplate.innerHTML = "Number plate starts with Uppercase."
           return false;
     }
-    // if(carnumberplate.value.length<7){
-    //     carnumberplate.style.border = "2px solid red";
-    //     errorcarnumberplate.innerHTML = "Number should have 7 characters";
-    //     return false;
-    // }
+    if(carnumberplate.value.length<7){
+        carnumberplate.style.border = "2px solid red";
+        return false;
+    }
     else{
         carnumberplate.style.border = '2px solid green'   
     }
