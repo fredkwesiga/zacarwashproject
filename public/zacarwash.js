@@ -45,13 +45,6 @@ let register =() =>{
     //validating NIN
     let nin = document.registerform.nin
     let ninnumber = /^[A-Za-z-0-9]+$/
-    //  if (!(nin.value.match(ninnumber) && nin.length==11)){
-    //     nin.style.border = "2px solid red";
-    //     return false;
-    // }
-    // else{
-    //     nin.style.border = "2px solid green"
-    // }
 
     if (!(nin.value.length==11)) {
         nin.style.border = "1px solid red"
@@ -65,7 +58,7 @@ let register =() =>{
     
     //validating place of residence.
     let placeofresidence = document.registerform.placeofresidence
-    let residence = /^[A-Za-z]+$/
+    let residence = /^[A-Za-z]+$/ //get any string with alphabetic letters starting with capital
     if(!placeofresidence.value.match(residence)){
         placeofresidence.style.border = "2px solid red"  
         return false;   
