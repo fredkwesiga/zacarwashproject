@@ -1,5 +1,5 @@
 //Dependecies
-const express = require('express');
+const express = require('express'); //aids us with routing and creating the server
 const moment = require('moment');
 const path = require('path')
 const mongoose = require('mongoose');
@@ -22,6 +22,7 @@ const dashboardRoutes = require('./routes/dashboardRoutes')
 const reportRoutes = require('./routes/reportRoutes')
 const managerRoutes = require('./routes/managerRoutes')
 const Manager = require('./models/Manager')
+
 //instantitions
 const app = express();
 
@@ -44,7 +45,7 @@ mongoose.connection
 
 //configurations or settings
 // Express.js application to look in the views folder for template files and to use Pug as the template engine.
-app.set('views', './views');
+app.set('views', './views'); //all pug files that we have set in view will be in views folder
 app.set('view engine', 'pug');
 app.locals.moment = moment
 
@@ -70,7 +71,7 @@ app.use(loginChecker)
 
 
 
-//routes
+//routes to display the pug files
 app.use('/', homeRoutes)
 app.use('/manager', managerRoutes);
 app.use('/', loginRoutes)
@@ -87,7 +88,7 @@ app.get('*', (req, res) => {
   res.send('404! This is an invalid URL.');
 })
 
-//server
+//server...creating server
 app.listen(3000, function() {
   console.log('listening on 3000')
 })

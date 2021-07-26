@@ -14,10 +14,10 @@ washPackages = {
     engine: { washerFee: 2000, packagePrice: 10000 }
 }
 
-
+//async in front of the whole call back function
 router.get('/', async(req,res)=>{
     //This is a mongodb function that finds members/objects in register collection
-   let washerlist = await Register.find(); 
+   let washerlist = await Register.find(); //use await because its a data base operation that returns a promise
    console.log(washerlist)
    res.render('carwashtracking', {title:"CarWash Tracking System", washers:washerlist})
 })

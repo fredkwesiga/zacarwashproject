@@ -12,6 +12,13 @@
     width: 700px;
     
 }
+.alert{
+    font-size: 18px;
+    color: blue;
+    margin: auto;
+    width: 500px;
+    text-align: center;
+}
 
 
 /* styles the home page */
