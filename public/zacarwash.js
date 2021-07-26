@@ -5,7 +5,7 @@ let register =() =>{
     
     //validing fullnames
     let fullname = document.registerform.fullname
-    let fullnames = /^([a-zA-Z'-.].+[a-zA-Z'-.]+)$/;
+    let fullnames = /^[A-Z]([a-z'-.]+ [A-Z][a-z'-.]+)$/;
     if(!fullname.value.match(fullnames)){
         fullname.style.border = "2px solid red"
         return false;    
