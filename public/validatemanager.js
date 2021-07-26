@@ -7,7 +7,7 @@ let registerManager = ()=>{
     //validating Manager's fullnames
     let fullnames = document.newManager.fullnames
     // let errorFullNames = document.getElementById("#errorfullnames")
-    let managersname = /^([a-zA-Z'-.].+[a-zA-Z'-.]+)$/;
+    let managersname = /^[A-Z]([a-z'-.]+ [A-Z][a-z'-.]+)$/;
 
     if(!fullnames.value.match(managersname)){
         fullnames.style.border = "2px solid red"
