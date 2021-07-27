@@ -63,8 +63,8 @@ block content
                         input.costmonitor(type='text' name='timeArrived' onfocus="(this.type='time')" placeholder='Time of Arrival')
                         br
                         select.washer(name="washer")
-                            if washers.length 
-                                each washer in washers 
+                            if washers.length //-This is a check,if washers.length is greater than zero then code should proccede
+                                each washer in washers //-looping through washers object, and for each one of them access the fullname.
                                     option(value=washer._id) #{washer.fullname}
                         br
                     select#costmonitorpackages( name='costmonitorpackages')

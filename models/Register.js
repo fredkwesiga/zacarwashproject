@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+//creating registers schema
 const registerSchema = new mongoose.Schema({
     fullname:{
         type: String,
@@ -25,5 +25,5 @@ const registerSchema = new mongoose.Schema({
         trim: true,
     }
 })
-
+//registers the washer with mongoose to be accessed anywhere by our in our application.
 module.exports = mongoose.model('Register', registerSchema);

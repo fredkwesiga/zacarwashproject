@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+//creating carwash track schema
 const carwashtrackSchema = new mongoose.Schema({
     carmodel: {
         type: String,
@@ -36,4 +37,5 @@ const carwashtrackSchema = new mongoose.Schema({
     }
 })
 
+//registers the car wash tracking  with mongoose to be accessed anywhere by our in our application.
 module.exports = mongoose.model('Carwashtrack', carwashtrackSchema);
