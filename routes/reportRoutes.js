@@ -7,7 +7,7 @@ const moment = require('moment'); //moment aids us to format or get the date
 const router = express.Router();
 
 
-
+//requesting data for the expenses in the expenses report
 router.get('/expensereport', async (req, res) => {
        try {
          //using moment to get the selected date or default date  
@@ -38,6 +38,7 @@ router.get('/expensereport', async (req, res) => {
     }
 })
 
+//requeting data for all cars washed and who washed it on that day
 router.get('/carwashtrackingreport', async (req, res) => {
     try {
         let selectedDate = moment().format('YYYY-MM-DD')
@@ -66,7 +67,7 @@ router.get('/carwashtrackingreport', async (req, res) => {
     }
 })
 
-
+//requesting washers details in reports
 router.get('/washer-detailsreport', async (req, res) => {
     try {
         // find all the data in the Washers collection

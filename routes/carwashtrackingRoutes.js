@@ -1,9 +1,10 @@
-
+//importing all reqired dependecies
 const express = require('express');
 const router = express.Router();
 const Carwashtrack = require('../models/Carwashtrack')
 const Register = require('../models/Register')
-const moment = require('moment');
+
+//const moment = require('moment');
 
 //In-memory database that attaches different fees for packages, helps us save fee to the database
 washPackages = {
@@ -31,17 +32,17 @@ router.post("/", async(req, res) => {
         let datetimeArrival = Date.parse(data.dateArrived + 'T' + data.timeArrived)
         data.datetimeArrival = datetimeArrival
 
-        //derive package price and washer Fee
-        //using washPackages one is able to derive the particular details of that package
         
+        //using washPackages one is able to derive the particular details of that package
         let packageDetails = washPackages[data.costmonitorpackages]
            
-       
+       //derive package price and washer Fee
         data.packagePrice = packageDetails['packagePrice']
         data.washerFee = packageDetails['washerFee']
 
         
         console.log(data)
+        //using the await method to aid as save details in the carwashtrack page as we post
         const carwashmonitor = new Carwashtrack(req.body);
         await carwashmonitor.save()
         res.redirect('carwashtracking?alert=success')

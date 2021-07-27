@@ -3,10 +3,11 @@ const express = require('express'); //aids us with routing and creating the serv
 const moment = require('moment');
 const path = require('path')
 const mongoose = require('mongoose');
-const passport = require('passport');
+const passport = require('passport'); //Passport is an authentication library to aid in authenictation
 const passportLocalMongoose = require('passport-local-mongoose');
 require('dotenv').config();
 
+//create a session middleware with the given
 const expressSession = require('express-session')({
   secret: 'secret',
   resave: false,
@@ -53,6 +54,8 @@ app.locals.moment = moment
 //adding body parser middleware that handles reading data from the <form> element.
 app.use(express.urlencoded({extended: true}))
 app.use(express.static(path.join(__dirname, "public")));
+
+//
 app.use(expressSession);
 app.use(passport.initialize());
 app.use(passport.session());
@@ -61,6 +64,8 @@ passport.use(Manager.createStrategy());
 passport.serializeUser(Manager.serializeUser());
 passport.deserializeUser(Manager.deserializeUser());
 
+//middleware 
+//checks if the session is authenticated
 var loginChecker = function (req, res, next) {
   if (req.path != '/login' && !req.session.user) {
     res.redirect('/login')
