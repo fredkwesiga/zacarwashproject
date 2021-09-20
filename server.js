@@ -66,13 +66,13 @@ passport.deserializeUser(Manager.deserializeUser());
 
 //middleware 
 //checks if the session is authenticated
-var loginChecker = function (req, res, next) {
-  if (req.path != '/login' && !req.session.user) {
-    res.redirect('/login')
-  }
-  next()
-}
-app.use(loginChecker)
+// var loginChecker = function (req, res, next) {
+//   if (req.path != '/login' && !req.session.user) {
+//     res.redirect('/login')
+//   }
+//   next()
+// }
+// app.use(loginChecker)
 
 
 
@@ -94,6 +94,6 @@ app.get('*', (req, res) => {
 })
 
 //server...creating server
-app.listen(3000, function() {
-  console.log('listening on 3000')
+app.listen(3600, function() {
+  console.log('listening on 3600')
 })
